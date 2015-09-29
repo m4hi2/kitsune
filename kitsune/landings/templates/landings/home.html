@@ -1,6 +1,13 @@
-{% extends "base.html" %}
 {% from 'products/includes/product_macros.html' import product_cards with context %}
-{% set styles = ('home',) %}
+
+{% if waffle.flag('responsive') %}
+  {% extends 'base-responsive.html' %}
+  {% set styles = ('home-responsive',) %}
+{% else %}
+  {% extends 'base.html' %}
+  {% set styles = ('home',) %}
+{% endif %}
+
 
 {% block content %}
   <div class="grid_12">

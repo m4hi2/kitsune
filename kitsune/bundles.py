@@ -9,6 +9,14 @@ PIPELINE_CSS = {
         ),
         'output_filename': 'build/common-min.css'
     },
+    'responsive': {
+        'source_filenames': (
+            'normalize-css/normalize.css',
+            'fontawesome/css/font-awesome.css',
+            'sumo/less/responsive.less',
+        ),
+        'output_filename': 'responsive.css'
+    },
     'community': {
         'source_filenames': (
             'sumo/less/wiki-content.less',
