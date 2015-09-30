@@ -244,17 +244,19 @@ window.k = window.k || {};
 
   function layoutTweaks() {
     // Adjust the height of cards to be consistent within a group.
-    $('.card-grid').each(function() {
-      var $cards = $(this).children('li');
-      var max = 0;
-      $cards.each(function() {
-        var h = $(this).height();
-        if (h > max) {
-          max = h;
-        }
+    if (!$('body').is('.responsive')) {
+      $('.card-grid').each(function () {
+        var $cards = $(this).children('li');
+        var max = 0;
+        $cards.each(function () {
+          var h = $(this).height();
+          if (h > max) {
+            max = h;
+          }
+        });
+        $cards.height(max);
       });
-      $cards.height(max);
-    });
+    }
   }
 
   function pad(str, length, padChar) {

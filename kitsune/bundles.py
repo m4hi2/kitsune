@@ -14,8 +14,9 @@ PIPELINE_CSS = {
             'normalize-css/normalize.css',
             'fontawesome/css/font-awesome.css',
             'sumo/less/responsive.less',
+            'sumo/less/buttons.less',
         ),
-        'output_filename': 'responsive.css'
+        'output_filename': 'build/responsive-min.css'
     },
     'community': {
         'source_filenames': (
@@ -148,6 +149,12 @@ PIPELINE_CSS = {
             'sumo/less/home.less',
         ),
         'output_filename': 'build/home-min.css'
+    },
+    'home-responsive': {
+        'source_filenames': (
+            'landings/less/home.less',
+        ),
+        'output_filename': 'build/home-responsive-min.css'
     },
     'gallery': {
         'source_filenames': (

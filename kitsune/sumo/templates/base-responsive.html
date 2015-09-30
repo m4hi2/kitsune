@@ -61,7 +61,7 @@
 <script src="{{ STATIC_URL }}sumo/js/libs/html5-shiv.js"></script>
 <![endif]-->
 </head>
-<body class="html-{{ DIR }} logged-{% if user.is_authenticated() %}in{% else %}out{% endif %} {{ classes }} {{ request.LANGUAGE_CODE }}"
+<body class="responsive html-{{ DIR }} logged-{% if user.is_authenticated() %}in{% else %}out{% endif %} {{ classes }} {{ request.LANGUAGE_CODE }}"
       data-readonly="{{ settings.READ_ONLY|json }}"
       data-usernames-api="{{ url('users.api.usernames') }}"
       data-static-url="{{ STATIC_URL }}"
@@ -181,7 +181,7 @@
         <li class="wrap"><a href="http://www.mozilla.org/about/partnerships/">{{ _('Partner with Us') }}</a></li>
         <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/givenow-seq?preset=2&amp;source=mozillaorg_footer&amp;ref=EOYFR2014&amp;utm_campaign=EOYFR2014&amp;utm_source=mozilla.org&amp;utm_medium=referral&amp;utm_content=mozillaorg_footer" class="donate">{{ _('Donate') }}</a></li>
         <li class="wrap"><a href="http://www.mozilla.org/contribute/friends/">{{ _('Firefox Friends') }}</a></li>
-        <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">{{ _('Contribute to this site') }}</a></li>
+        <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/support.mozilla.org">{{ _('Contribute to this site') }}</a></li>
       </ul>
       <ul class="links-legal cf">
         <li><a href="http://www.mozilla.org/privacy/">{{ _('Privacy') }}</a></li>

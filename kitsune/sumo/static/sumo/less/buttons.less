@@ -1,0 +1,36 @@
+@shadowDepth: 3px;
+
+.button,
+.button:visited {
+  background: #ccc;
+  box-shadow: 0 @shadowDepth 0 #999;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  position: relative;
+
+  &.large {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+
+  &:hover {
+    background: #ddd;
+  }
+
+  &.coral {
+    background: #dc5c5c;
+    box-shadow: 0 @shadowDepth 0 #b34b4b;
+
+    &:hover {
+      background: #e55c5c;
+    }
+  }
+}

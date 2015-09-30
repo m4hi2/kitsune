@@ -1,0 +1,95 @@
+@import '../../sumo/less/variables.less';
+
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 40px 0 20px 0;
+  padding: 0;
+
+  > li {
+    background: #e6ebf2;
+    display: flex;
+    flex: 1;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.05);
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(4n),
+    &:nth-of-type(4n-3) {
+      flex: 2;
+
+      > a {
+        width: 620px;
+
+        .title {
+          font-size: 30px;
+        }
+      }
+    }
+
+    > a,
+    > a:visited {
+      color: @textGrey;
+      box-sizing: border-box;
+      display: block;
+      padding: 20px;
+      width: 300px;
+
+      > img {
+        float: left;
+      }
+
+      .title,
+      .description {
+        display: block;
+        margin-left: 116px;
+      }
+
+      .title {
+        font-size: 20px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+#get-involved {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media only screen and (max-width : 1024px) {
+  .card-grid {
+    display: block;
+
+    > li {
+      display: block;
+      margin-right: 0;
+
+      &:nth-of-type(4n),
+      &:nth-of-type(4n-3) {
+        > a {
+          width: auto;
+
+          .title {
+            font-size: 20px;
+          }
+        }
+      }
+
+      > a {
+        width: auto;
+      }
+    }
+  }
+}

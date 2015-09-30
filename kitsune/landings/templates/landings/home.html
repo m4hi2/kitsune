@@ -10,16 +10,25 @@
 
 
 {% block content %}
-  <div class="grid_12">
-    <section id="products-and-services">
-      {{ product_cards(products) }}
+  {% if waffle.flag('responsive') %}
+    {{ product_cards(products) }}
+    <section id="get-involved">
+      <a class="button coral large" href="{{ url('landings.get_involved') }}">
+        {{ _('Volunteer for Mozilla Support') }}
+      </a>
     </section>
-  </div>
-  <section id="get-involved-box" class="grid_12">
-    <a class="btn btn-submit" href="{{ url('landings.get_involved') }}">
-      {{ _('Volunteer for Mozilla Support') }}
-    </a>
-  </section>
+  {% else %}
+    <div class="grid_12">
+      <section id="products-and-services">
+        {{ product_cards(products) }}
+      </section>
+    </div>
+    <section id="get-involved-box" class="grid_12">
+      <a class="btn btn-submit" href="{{ url('landings.get_involved') }}">
+        {{ _('Volunteer for Mozilla Support') }}
+      </a>
+    </section>
+  {% endif %}
 {% endblock %}
 
 {% block outer_side %}
